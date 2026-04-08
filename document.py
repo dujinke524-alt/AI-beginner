@@ -56,7 +56,7 @@ embeddings = DashScopeEmbeddings(
     model="text-embedding-v4",
     # 确保你已经在系统环境变量中设置了 DASHSCOPE_API_KEY
     # 如果没有，可以直接在这里写死：dashscope_api_key="sk-你的key"
-    dashscope_api_key="sk-62d3c89fda6e4b64a534a703f8fd9f2d"
+    dashscope_api_key="sk-你的key"
 )
 
 # --- 6. 放进 FAISS 向量库 ---
@@ -64,7 +64,8 @@ embeddings = DashScopeEmbeddings(
 vectorstore = FAISS.from_documents(docs_for_vectorstore, embeddings)
 
 # --- 7. 提问题并搜索 ---
-question = "火零地的实际应用"
+print('输入你的问题:')
+question =  input()
 
 # 相似度搜索，返回最相关的 3 段
 results = vectorstore.similarity_search(question, k=3)
