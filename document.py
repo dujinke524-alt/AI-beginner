@@ -8,7 +8,7 @@ import os
 
 # --- 1. 读取 Word 文档 ---
 # 为了避免混淆，我们将 Word 文档对象命名为 word_doc
-word_doc = Document(r"C:\Users\D\Desktop\记事本\计划.docx")
+word_doc = Document(r"sample.docx")
 
 # --- 2. 提取并整合所有文本 ---
 # 创建一个大列表，用来存放文档中所有的文本内容
